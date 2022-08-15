@@ -1,10 +1,7 @@
-const { transporter } = require('./email.service')
+import { transporter } from "./email.service"
 
-module.exports = {
-  sendEmail,
-}
 
-async function sendEmail(email) {
+export async function sendEmail(email: string) {
   await transporter.sendMail({
     from: 'Butterfly <butterfly.test@outlook.com>', // sender address
     to: email, // list of receivers

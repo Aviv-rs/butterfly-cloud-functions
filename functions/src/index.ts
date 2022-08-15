@@ -1,6 +1,5 @@
 import * as functions from "firebase-functions";
-
-const { sendEmail } = require("../../services/digital.service");
+import {sendEmail} from "./services/digital.service"
 
 exports.newApiKey = functions.firestore
   .document("API_KEYS/{apiKey}")
