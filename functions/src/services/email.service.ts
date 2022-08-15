@@ -1,5 +1,5 @@
-import * as nodemailer from "nodemailer"
-export const transporter = nodemailer.createTransport({
+const nodemailer = require('nodemailer')
+module.exports.transporter = nodemailer.createTransport({
   service: 'hotmail', // outlook's service
   port: 587,
   auth: {
@@ -8,4 +8,3 @@ export const transporter = nodemailer.createTransport({
     pass: 'Butterfly123', // mail password
   },
 })
-
