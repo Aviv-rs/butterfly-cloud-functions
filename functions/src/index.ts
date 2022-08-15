@@ -22,7 +22,6 @@ async function sendEmail(email: string) {
   })
 
 }
-
 exports.newApiKey = functions.firestore
   .document("API_KEYS/{apiKey}")
   .onCreate((snap, context) => {
